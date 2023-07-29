@@ -23,11 +23,13 @@
 }
 .product__info{
     height:10px;
-    margin-bottom:15px;
+    margin-bottom:25px;
+    
 }
 
 .product__price{
-    margin-top:5px;
+    
+    margin-top:10px;
 }
 .product button {
     background:#f0c14b;
