@@ -1,26 +1,31 @@
+import { PriceChange, PriceChangeOutlined } from "@mui/icons-material";
 import "./Product.css";
 import React from "react";
 
 
 
-function Product(){
+function Product({title,image,price,rating}){
     return (
     <div className="product">
         <div className="product__info">
-            <p>The lean startup</p>
-            <p className="product__price">
+            <p>{title}</p>
+        </div>
+        <p className="product__price">
                 <small>$</small>
-                <strong>19.99</strong>
+                <strong>{price}</strong>
+                
             </p>
             <div className="product__rating">
-                <p>⭐</p>
-                <p>⭐</p>
-                <p>⭐</p>
+                {Array({rating}).fill().map((_,i)=>(
+                    <p>⭐</p>
+                ))
+                }
+                
+                
             </div>
-            <img src="https://m.media-amazon.com/images/I/81vvgZqCskL._AC_UY218_.jpg" alt="" />
+            <img src={image} alt="" />
 
             <button> Add to Basket</button>
-        </div>
 
     </div>
     )
