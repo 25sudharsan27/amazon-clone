@@ -9,6 +9,7 @@
     padding:20px;
     background-color:white;
     height:max-content;
+    justify-content: space-between;
 }
 
 .checkout__title{
