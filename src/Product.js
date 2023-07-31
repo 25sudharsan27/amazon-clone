@@ -5,20 +5,21 @@ import reducer, {initialState} from "./reducer"
 import {useStateValue} from "./StateProvider"
 
 function Product({title,image,price,rating}){
-    const [sate,dispatch]=useStateValue();
-    console.log("this is the basket >>>")
-    const addToBasket = () => {
-        // dispatch the item into the data layer
+    const [{basket},dispatch]=useStateValue();
+    console.log("this is the basket >>>",basket);
+
+    const addToBasket=()=>{
         dispatch({
             type:"ADD_TO_BASKET",
-            item: {
-                title: title,
+            item:{
+                title:title,
                 image:image,
                 price:price,
                 rating:rating,
-            }
-        })
+            },
+        });
     }
+
     return (
     <div className="product">
         <div className="product__info">
@@ -39,7 +40,7 @@ function Product({title,image,price,rating}){
             </div>
             <img src={image} alt="" />
 
-            <button> Add to Basket</button>
+            <button onClick={addToBasket}> Add to Basket</button>
 
     </div>
     )

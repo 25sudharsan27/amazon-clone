@@ -1,4 +1,5 @@
 import React , {createContext, useContext, useReducer} from "react";
+import reducer , {initialState} from "./reducer"
 
 //prepares the dataLayer
 
