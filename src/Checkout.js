@@ -1,9 +1,11 @@
 import React from "react";
 import "./Checkout.css";
 import Subtotal from "./Subtotal";
-
+import {useStateValue} from "./StateProvider";
 function Checkout(){
+    
     return (
+        
         <div className="checkout">
             <div className="checkout__left" height="100px" width=" 100px">
                 <img className="checkout__ad"
