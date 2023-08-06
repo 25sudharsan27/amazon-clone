@@ -38,6 +38,10 @@ const reducer =(state, action) => {
         default:
             return state;
             console.log("def")
+        case "SET_USER":
+            return{
+                ...state,
+            }
     }
 }
 

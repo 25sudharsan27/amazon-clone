@@ -20,20 +20,24 @@ function Header(){
             <div className="header__nav">
                 <div className="header__option">
                 <Link to="/signin">
-                    <span className="header__optionLineOne">Hello Guest</span>
+                    <span id="sign" className="header__optionLineOne">Hello Guest     </span><br/>
                     
                     <span className="header__optionLineTwo">Sign In</span>
                     </Link>
                 </div>
+                <Link to="/orders">
                 <div className="header__option">
                     <span className="header__optionLineOne">Returns</span>
                     
                     <span className="header__optionLineTwo">& Orders</span>
                 </div>
+                </Link>
+                <Link to="/prime">
                 <div className="header__option">
                     <span className="header__optionLineOne">Your</span>
                     <span className="header__optionLineTwo">Prime</span>
                 </div>
+                </Link>
                 <Link to="/checkout">
                 <div className="header__optionBasket">
                     <ShoppingBasketIcon/>
