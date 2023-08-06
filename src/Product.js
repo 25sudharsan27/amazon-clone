@@ -4,7 +4,7 @@ import React from "react";
 import reducer, {initialState} from "./reducer"
 import {useStateValue} from "./StateProvider"
 
-function Product({title,image,price,rating}){
+function Product({id,title,image,price,rating}){
     const [{basket},dispatch]=useStateValue();
     console.log("this is the basket >>>",basket);
 
@@ -12,6 +12,7 @@ function Product({title,image,price,rating}){
         dispatch({
             type:"ADD_TO_BASKET",
             item:{
+                id:id,
                 title:title,
                 image:image,
                 price:price,

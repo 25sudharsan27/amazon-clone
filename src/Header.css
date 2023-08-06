@@ -53,6 +53,9 @@
 .header__optionLineTwo{
     font-weight:800;
     font-size:13px;
+    text-decoration:none #131921;
+    color:white;
+
 }
 .header__optionBasket{
     color:white;
