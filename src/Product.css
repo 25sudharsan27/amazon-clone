@@ -12,9 +12,11 @@
     min-width:60px;
     background-color:white;
     z-index: 1;
+    transition: all 0.5s ease-in-out;
     
     
 }
+
 
 .product img{
     max-height:200px;
