@@ -13,7 +13,9 @@ function Signin(){
     const signIn=e=>{
         e.preventDefault();
         console.log({email},{password})
-        auth.signInWithEmailAndPassword(email,password)
+        
+        auth
+        .signInWithEmailAndPassword(email,password)
         .then(auth=>{
             history.push('/')
         })
