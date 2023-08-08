@@ -3,9 +3,10 @@ import "./Checkout.css";
 import Subtotal from "./Subtotal";
 import {useStateValue} from "./StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
+import {user} from "./firebase"
 
 function Checkout(){
-    const[{basket},dispatch]=useStateValue();
+    const[{basket,user},dispatch]=useStateValue();
 
     return (
         
@@ -14,6 +15,7 @@ function Checkout(){
                 <img className="checkout__ad"
                 src="https://www.apunkagames.biz/wp-content/uploads/2019/03/header-banner.jpg" width="100%" />
                 <div>
+                    <h3>Hello ,{user?.email}</h3>
                     <h2 className="checkout__title">Your Shopping Basket</h2>
                 
                 {basket.map(item=>(
